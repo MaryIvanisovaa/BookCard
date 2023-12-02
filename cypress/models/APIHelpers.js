@@ -1,3 +1,20 @@
+
+// create account
+export class CreateUserHelper {
+  signupUser(user) {
+    cy.request({
+      method: 'POST',
+      url: 'https://bookcart.azurewebsites.net/api/User',
+      body: user
+    }).then((response) => {
+      expect(response.status).to.eq(200);
+    });
+  }
+}
+
+
+
+// login to account via cypress.env
 export let token;
 export function loginViaApi(){
 
@@ -29,3 +46,4 @@ export function setLocalStorageForLogin(){
         }
     })
 }
+
