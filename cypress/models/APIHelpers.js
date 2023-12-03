@@ -2,7 +2,7 @@
 // create account
 export class CreateUserHelper {
   signupUser(user) {
-    cy.request({
+    cy.api({
       method: 'POST',
       url: 'https://bookcart.azurewebsites.net/api/User',
       body: user
@@ -21,12 +21,9 @@ export function loginViaApi(){
 const username = Cypress.env('username');
 const password = Cypress.env('password')
 
-cy.request({
+cy.api({
     method: "POST",
     url: "https://bookcart.azurewebsites.net/api/login",
-    headers: {
-        Authorization: `Bearer ${token}`,
-      },
     body: {
         username: username,
         password: password,
@@ -46,4 +43,6 @@ export function setLocalStorageForLogin(){
         }
     })
 }
+
+
 
