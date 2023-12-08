@@ -7,3 +7,11 @@ describe('Login Via API', () => {
   cy.get('.mat-button-wrapper').eq(3).should('contain',' Maryyyyyy ')
 })
 })
+
+// import { getAuth, loginViaAPI, token } from '../../models/APIHelpers'
+
+// describe('template spec', () => {
+//   it('login Via API', () => {
+//     loginViaAPI();
+//   })
+// })
