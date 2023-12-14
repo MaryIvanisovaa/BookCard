@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-03T10:59:01.649Z",
+    "end": "2023-12-03T10:59:04.330Z",
+    "duration": 2681,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e5c4ff9e-d782-46ed-b972-4f7ca0e3ae99",
+      "title": "",
+      "fullFile": "cypress\\e2e\\createUser.cy.js",
+      "file": "cypress\\e2e\\createUser.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b9f7ea40-f0c2-4347-975e-2e2695509c12",
+          "title": "User Signup API Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should sign up a new user",
+              "fullTitle": "User Signup API Test should sign up a new user",
+              "timedOut": null,
+              "duration": 2373,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = {\n  \"firstname\": \"Mariia\",\n  \"lastname\": \"Ivanisova\",\n  \"username\": \"Maryyyyyy\",\n  \"password\": \"123123Mariia\",\n  \"confirmPassword\": \"123123Mariia\",\n  \"gender\": \"Female\"\n};\nconst createUserHelper = new _APIHelpers.CreateUserHelper();\ncreateUserHelper.signupUser(user);",
+              "err": {},
+              "uuid": "bb054fa3-8334-42b7-ae8e-fab5a7e9ac79",
+              "parentUUID": "b9f7ea40-f0c2-4347-975e-2e2695509c12",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb054fa3-8334-42b7-ae8e-fab5a7e9ac79"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2373,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,8 +1,2 @@
 .gitattributes
 node_modules
-package-lock.json
-package.json
-results
-bookcard.settings.json
-cypress.config.js
-cypress.env.json
