@@ -5,7 +5,7 @@ name: Run Cypress tests via CI
 on:
  push:
   branches: 
-   - '*'
+    -'*'
 
 jobs: 
  build:
@@ -41,6 +41,8 @@ jobs:
     - name: Get test report
       uses: actions/download-artifact@v3
       with:
+        name: Test report
+        if: failure() || success()
         name: Test report
         if: failure() || success()
 
