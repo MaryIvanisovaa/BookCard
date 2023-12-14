@@ -1,0 +1,41 @@
+env: 
+  RECORD_KEY: ${{secrets.RECORD_KEY}} 
+
+name: Run Cypress tests via CI
+on:
+ push:
+  branches: 
+   -main
+   -workflow_dispatch
+
+jobs: 
+ build:
+  runs-on: ubuntu-latest 
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+       node-version: 14
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests
+      run: npx cypress run --record --key $RECORD_KEY    
+    - name: Generate report
+      run: npm run generate:report
+      if: failure() || success()
+    - name: Save report
+      uses: actions/upload-artifact@v3
+      with:
+        name: Test report
+        path: mochawesome-report
+      if: failure() || success()
+    - name: Get test report
+      uses: actions/download-artifact@v3
+      with:
+        name: Test report
+        if: failure() || success()
+      
+
