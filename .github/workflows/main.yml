@@ -28,7 +28,6 @@ jobs:
     - name: Generate report
       run: npm run generate:report
       if: failure() || success()
-
     - name: Save report
       uses: actions/upload-artifact@v3
       with:
