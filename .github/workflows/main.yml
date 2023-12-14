@@ -5,7 +5,8 @@ name: Run Cypress tests via CI
 on:
  push:
   branches: 
-   -CRUD-operations
+
+   -main
    -workflow_dispatch
 
 jobs: 
@@ -14,7 +15,7 @@ jobs:
 
   steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -26,6 +27,7 @@ jobs:
 
     - name: Run tests
       run: cypress run   
+
 
     - name: Generate report
       run: npm run generate:report
@@ -43,5 +45,4 @@ jobs:
       with:
         name: Test report
         if: failure() || success()
-      
 
