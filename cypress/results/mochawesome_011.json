@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-14T19:08:40.179Z",
+    "end": "2023-12-14T19:08:44.225Z",
+    "duration": 4046,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73d8e379-3126-4521-87e5-67e586a9d8fe",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Wishlist tests\\deleteWishlistItem.cy.js",
+      "file": "cypress\\e2e\\Wishlist tests\\deleteWishlistItem.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5803d279-4803-42f9-b9e5-9ba7d59291cb",
+          "title": "Wishlist spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete Wishlist item",
+              "fullTitle": "Wishlist spec Delete Wishlist item",
+              "timedOut": null,
+              "duration": 3940,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_wishlistPage.default.deleteWishlistItem();",
+              "err": {},
+              "uuid": "d8d59604-117d-40e6-b9b3-2610c658ba99",
+              "parentUUID": "5803d279-4803-42f9-b9e5-9ba7d59291cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8d59604-117d-40e6-b9b3-2610c658ba99"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3940,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -20,13 +20,13 @@ jobs:
        node-version: 14
 
     - name: Restore dependencies
-      run: npm install
+      run: npm install 
 
     - name: Install dependencies
-      run: npm ci
+      run: npm ci --save-dev
 
     - name: Run tests
-      run: cypress run   
+      run: npx cypress run  
 
     - name: Generate report
       run: npm run generate:report
