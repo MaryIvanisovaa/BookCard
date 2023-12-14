@@ -5,9 +5,8 @@ name: Run Cypress tests via CI
 on:
  push:
   branches: 
+    -main
 
-   -main
-   -workflow_dispatch
 
 jobs: 
  build:
