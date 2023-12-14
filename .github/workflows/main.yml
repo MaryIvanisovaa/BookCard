@@ -19,9 +19,6 @@ jobs:
       with:
        node-version: 14
 
-    - name: Restore dependencies
-      run: npm install 
-
     - name: Install dependencies
       run: npm ci --save-dev
 
