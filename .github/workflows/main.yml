@@ -5,6 +5,7 @@ name: Run Cypress tests via CI
 on:
  push:
   branches: 
+
    -main
    -workflow_dispatch
 
@@ -22,10 +23,11 @@ jobs:
        node-version: 14
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run tests
-      run: npx cypress run --record --key $RECORD_KEY   
+      run: cypress run   
+
 
     - name: Generate report
       run: npm run generate:report
@@ -43,4 +45,4 @@ jobs:
       with:
         name: Test report
         if: failure() || success()
-      
+
